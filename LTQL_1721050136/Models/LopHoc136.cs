@@ -12,10 +12,12 @@ namespace LTQL_1721050136.Models
     {
         [Key]
         [Display(Name ="Mã Lớp")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int MaLop { get; set; }
         [StringLength(50)]
         [Display(Name = "Tên Lớp")]
         public string TenLop { get; set; }
+        public ICollection<SinhVien> SinhViens { get; set; }
 
     }
 }
