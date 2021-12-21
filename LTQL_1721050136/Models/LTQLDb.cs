@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace LTQL_1721050136.Models
 {
-    public partial class LopHoc136 : DbContext
+    public partial class LTQLDb : DbContext
     {
-        public LopHoc136()
-            : base("name=LopHoc136")
+        public LTQLDb()
+            : base("name=LTQLDb")
         {
         }
 
