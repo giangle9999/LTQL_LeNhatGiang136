@@ -1,0 +1,40 @@
+﻿@model IEnumerable<LTQL_1721050136.Models.SinhVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LopHoc136.TenLop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LopHoc136.TenLop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoTen)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Sửa", new { id=item.MaSinhVien }) |
+            @Html.ActionLink("Thông tin", "Thông tin", new { id=item.MaSinhVien }) |
+            @Html.ActionLink("Xóa", "Xóa", new { id=item.MaSinhVien })
+        </td>
+    </tr>
+}
+
+</table>
