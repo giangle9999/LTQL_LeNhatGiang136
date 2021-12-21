@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LTQL_1721050136.Models
 {
+    [Table("SinhVien")]
     public class SinhVien
     {
         [Key]
